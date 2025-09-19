@@ -29,7 +29,7 @@ function completeTask(id) {
     task.completed = true;
     console.log(`Task "${task.title}" is now completed!`);
   } else {
-    console.log("Task not found.")
+    console.log("Task not found.");
   }
 }
 
