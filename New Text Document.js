@@ -4,7 +4,7 @@
 let tasks = [
   { id: 1, title: "Learn JavaScript", completed: false },
   { id: 2, title: "Practice coding", completed: true },
-  { id: 3, title: "Build a project", completed: false }
+  { id: 3, title: "Build a project", completed: false },
 ];
 
 // Function to display all tasks
@@ -13,7 +13,7 @@ let tasks = [
  */
 function showTasks() {
   console.log("Your Tasks:");
-  tasks.forEach(task => {
+  tasks.forEach((task) => {
     console.log(`${task.id}. ${task.title} - Completed: ${task.completed}`);
   });
 }
@@ -24,7 +24,7 @@ function showTasks() {
  * @param id
  */
 function completeTask(id) {
-  let task = tasks.find(t => t.id === id);
+  let task = tasks.find((t) => t.id === id);
   if (task) {
     task.completed = true;
     console.log(`Task "${task.title}" is now completed!`);

@@ -2,24 +2,18 @@
 const globals = require("globals");
 const js = require("@eslint/js");
 const jsdoc = require("eslint-plugin-jsdoc");
+const prettierConfig = require("eslint-config-prettier");
 
 module.exports = [
-  // Apply recommended rules for JavaScript
   js.configs.recommended,
-
-  // Apply recommended rules for JSDoc
-  jsdoc.configs['flat/recommended'],
-
+  jsdoc.configs["flat/recommended"],
+  // Make sure Prettier is last so it can override other configs
+  prettierConfig,
   {
-    // Apply this configuration to all files
     files: ["**/*.js"],
-
-    // JSDoc plugin settings
     plugins: {
       jsdoc: jsdoc,
     },
-
-    // Language options
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "commonjs",
@@ -27,11 +21,8 @@ module.exports = [
         ...globals.node,
       },
     },
-
-    // Custom rules
     rules: {
-      "jsdoc/require-param-description": "warn",
-      "jsdoc/require-returns-description": "warn",
+      // Your custom rules here
     },
   },
 ];
