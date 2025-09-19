@@ -8,7 +8,10 @@ let tasks = [
 ];
 
 // Function to display all tasks
-function showTasks(
+/**
+ *
+ */
+function showTasks() {
   console.log("Your Tasks:");
   tasks.forEach(task => {
     console.log(`${task.id}. ${task.title} - Completed: ${task.completed}`);
@@ -16,6 +19,10 @@ function showTasks(
 }
 
 // Function to mark a task as completed
+/**
+ *
+ * @param id
+ */
 function completeTask(id) {
   let task = tasks.find(t => t.id === id);
   if (task) {
