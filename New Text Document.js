@@ -7,9 +7,8 @@ let tasks = [
   { id: 3, title: "Build a project", completed: false },
 ];
 
-// Function to display all tasks
 /**
- *
+ * Displays all tasks from the global `tasks` array to the console.
  */
 function showTasks() {
   console.log("Your Tasks:");
@@ -18,13 +17,12 @@ function showTasks() {
   });
 }
 
-// Function to mark a task as completed
 /**
- *
- * @param id
+ * Marks a specific task as completed by its ID.
+ * @param {number} id The ID of the task to mark as complete.
  */
 function completeTask(id) {
-  let task = tasks.find((t) => t.id === id);
+  const task = tasks.find((t) => t.id === id);
   if (task) {
     task.completed = true;
     console.log(`Task "${task.title}" is now completed!`);
