@@ -38,4 +38,3 @@ showTasks();
 completeTask(3);
 
 // Display tasks again
-function thisIsBroken( {} // Missing closing parenthesis and brace
